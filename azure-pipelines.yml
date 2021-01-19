@@ -32,3 +32,8 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '6b5546c2-edf1-4ee3-90c0-70e0b736c6ce'
+    appName: 'azure-devops-webapp'
+    package: $(System.DefaultWorkingDirectory)/**/*.zip
